@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using App.Models;
+using App.Services;
+using AutoMapper;
 
 namespace app
 {
@@ -26,12 +29,31 @@ namespace app
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.Configure<BookstoreDatabaseSettings>(
+            Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
+
+            services.AddSingleton<IBookstoreDatabaseSettings>(sp =>
+            sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
+
+            services.AddSingleton<BookService>();
+
+            services.AddMvc()
+                .AddJsonOptions(options => options.UseMemberCasing())
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddSwaggerGen(c =>
                 {
                     c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
                 });
+
+        
+            Mapper.Initialize(cfg =>
+                {
+                    cfg.CreateMap<Book, BookPayload>().ReverseMap();
+                });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,5 +81,7 @@ namespace app
             app.UseHttpsRedirection();
             app.UseMvc();
         }
+
+
     }
 }
