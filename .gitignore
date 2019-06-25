@@ -263,3 +263,6 @@ __pycache__/
 
 # Develop file
 appsettings.Development.json
+app/obj/Debug/netcoreapp2.2/app.assets.cache
+app/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache
+app/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache
