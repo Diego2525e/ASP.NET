@@ -1,0 +1,14 @@
+/home/diego/Documents/Test/app/bin/Debug/netcoreapp2.2/app.deps.json
+/home/diego/Documents/Test/app/bin/Debug/netcoreapp2.2/app.runtimeconfig.json
+/home/diego/Documents/Test/app/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json
+/home/diego/Documents/Test/app/bin/Debug/netcoreapp2.2/app.dll
+/home/diego/Documents/Test/app/bin/Debug/netcoreapp2.2/app.pdb
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cache
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cs
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.AssemblyInfoInputs.cache
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.AssemblyInfo.cs
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.RazorTargetAssemblyInfo.cache
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.dll
+/home/diego/Documents/Test/app/obj/Debug/netcoreapp2.2/app.pdb
